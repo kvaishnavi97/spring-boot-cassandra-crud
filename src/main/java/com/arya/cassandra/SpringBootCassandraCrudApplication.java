@@ -25,21 +25,21 @@ public class SpringBootCassandraCrudApplication {
 		SpringApplication.run(SpringBootCassandraCrudApplication.class, args);
 	}
 
-	@Autowired
-	private SuperHeroRepository superHeroRepository;
-
-	@Bean
-	CommandLineRunner runner() {
-		return args -> {
-			List<SuperHero> superHeroes = superHeroRepository.findAll();
-			if (superHeroes.isEmpty()) {
-				logger.info("******* Inserting Super heroes to DB *******");
-				superHeroRepository.saveAll(HelperUtil.getSuperHeroesData());
-			} else {
-				logger.info("******* Super heroes stored in DB Size :: {}", superHeroes.size());
-				logger.info("******* Super heroes stored in DB :: {}", superHeroes);
-			}
-		};
-	}
+//	@Autowired
+//	private SuperHeroRepository superHeroRepository;
+//
+//	@Bean
+//	CommandLineRunner runner() {
+//		return args -> {
+//			List<SuperHero> superHeroes = superHeroRepository.findAll();
+//			if (superHeroes.isEmpty()) {
+//				logger.info("******* Inserting Super heroes to DB *******");
+//				superHeroRepository.saveAll(HelperUtil.getSuperHeroesData());
+//			} else {
+//				logger.info("******* Super heroes stored in DB Size :: {}", superHeroes.size());
+//				logger.info("******* Super heroes stored in DB :: {}", superHeroes);
+//			}
+//		};
+//	}
 
 }

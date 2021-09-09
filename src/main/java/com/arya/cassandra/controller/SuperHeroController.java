@@ -2,7 +2,7 @@ package com.arya.cassandra.controller;
 
 
 import com.arya.cassandra.model.SuperHero;
-import com.arya.cassandra.service.SuperHeroService;
+
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.media.ArraySchema;
@@ -29,6 +29,7 @@ public class SuperHeroController {
 
     Logger logger = LoggerFactory.getLogger(getClass());
 
+    /*
     @Autowired
     private SuperHeroService superHeroService;
 
@@ -141,5 +142,5 @@ public class SuperHeroController {
         logger.info("*** Deleted Superhero from DB for Id :: {}", id);
 
         return ResponseEntity.ok().body("Deleted successfully...!");
-    }
+    }*/
 }
